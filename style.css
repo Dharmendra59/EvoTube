@@ -46,7 +46,7 @@ body {
     font-size: 18em;
     cursor: pointer;
 }
-
+/* Header Styles */
 .header {
     width: 100%;
     display: flex;
@@ -62,11 +62,14 @@ body {
     height: 60px;
 }
 
+/* Column 1 (Logo) */
 .col-1 {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 }
 
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -74,6 +77,7 @@ body {
     margin: 20px;
 }
 
+/* Column 2 (Search + Buttons) */
 .col-2 {
     display: flex;
     align-items: center;
@@ -81,11 +85,13 @@ body {
     flex-basis: 40%;
 }
 
+/* Form inside Column 2 */
 .col-2 form {
     position: relative;
     width: 100%;
 }
 
+/* Search Input */
 .col-2 input {
     height: 40px;
     width: 100%;
@@ -100,6 +106,7 @@ body {
     padding: 12px;
 }
 
+/* Search Button */
 .col-2 .searchBtn {
     min-width: 60px;
     height: 40px;
@@ -114,6 +121,7 @@ body {
     color: white;
 }
 
+/* Microphone Button */
 .col-2 .micBtn {
     min-width: 40px;
     height: 40px;
@@ -129,13 +137,107 @@ body {
     color: white;
 }
 
+/* Column 3 (Icons) */
 .col-3 {
     display: flex;
     align-items: center;
 }
 
+/* Icon styling */
 .col-3 i {
     margin-left: 25px;
+}
+
+/* Mobile Responsiveness - For smaller screens like phones */
+
+/* When screen width is 768px or less (tablets and below) */
+@media (max-width: 768px) {
+    .header {
+        padding: 5px 15px; /* Less padding for smaller screens */
+        height: 50px; /* Adjust header height */
+    }
+
+    .col-1 {
+        justify-content: center; /* Center the logo */
+        flex: 1; /* Allow the logo to take more space */
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .col-2 {
+        display: flex;
+        flex-direction: column; /* Stack search bar and buttons vertically */
+        align-items: flex-start;
+        margin-left: 0;
+        flex-basis: auto;
+        width: 100%; /* Allow the form to take full width */
+        margin-top: 10px;
+    }
+
+    .col-2 input {
+        width: 80px; /* Make the search bar smaller */
+        margin-bottom: 10px;
+    }
+
+    .col-2 .searchBtn {
+        min-width: 20px; /* Adjust button size */
+    }
+
+    .col-2 .micBtn {
+        min-width: 35px; /* Adjust mic button size */
+    }
+
+    .col-3 {
+        margin-top: 10px; /* Add spacing on top */
+        justify-content: center; /* Center the icons */
+        width: 100%;
+    }
+
+    .col-3 i {
+        margin-left: 15px; /* Less space between icons */
+    }
+}
+
+/* When screen width is 480px or less (phones) */
+@media (max-width: 480px) {
+    .header {
+        padding: 5px 10px; /* Less padding */
+        height: 45px; /* Smaller header */
+    }
+
+    .col-1 {
+        justify-content: center; /* Center the logo */
+        flex: 1;
+    }
+
+    .logo h1 {
+        font-size: 18px; /* Adjust logo font size */
+    }
+
+    .col-2 input {
+        width: 90%; /* Adjust width of the search bar */
+        margin-bottom: 8px;
+    }
+
+    .col-2 .searchBtn {
+        min-width: 45px; /* Adjust button size */
+    }
+
+    .col-2 .micBtn {
+        min-width: 30px; /* Adjust mic button size */
+    }
+
+    .col-3 {
+        margin-top: 10px; /* Add margin to the top */
+        justify-content: center; /* Center icons */
+        width: 100%;
+    }
+
+    .col-3 i {
+        margin-left: 10px; /* Less space between icons */
+    }
 }
 
 /* .wrapper {
