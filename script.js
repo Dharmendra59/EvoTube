@@ -21,6 +21,17 @@ fetch(
 
 .catch((err) => console.log(err));
 
+// Get references to the sidebar and the button
+const sidebar = document.getElementById('sidebar');
+const sidebarBtn = document.getElementById('sidebarBtn');
+
+// Add an event listener to the sidebar button
+sidebarBtn.addEventListener('click', () => {
+    // Toggle the 'sidebar-hidden' class on the sidebar
+    sidebar.classList.toggle('sidebar-hidden');
+});
+
+
 const getChannelIcon = (video_data) => {
     fetch(
             channel_http + new URLSearchParams({
