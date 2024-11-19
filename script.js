@@ -6,7 +6,7 @@ fetch(
     video_http + new URLSearchParams({
         part: "snippet, contentDetails, statistics, player",
         chart: "mostPopular",
-        maxResults: 200,
+        maxResults: 2000,
         regionCode: "IN",
         key: api_key
     })
@@ -31,6 +31,8 @@ sidebarBtn.addEventListener('click', () => {
     sidebar.classList.toggle('sidebar-hidden');
 });
 
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
 
 const getChannelIcon = (video_data) => {
     fetch(
