@@ -177,12 +177,12 @@ body {
     }
 
     .col-2 input {
-        width: 80px; /* Make the search bar smaller */
+        width: 80%; /* Make the search bar smaller */
         margin-bottom: 10px;
     }
 
     .col-2 .searchBtn {
-        min-width: 20px; /* Adjust button size */
+        min-width: 50px; /* Adjust button size */
     }
 
     .col-2 .micBtn {
