@@ -31,8 +31,7 @@ sidebarBtn.addEventListener('click', () => {
     sidebar.classList.toggle('sidebar-hidden');
 });
 
-const searchInput = document.getElementById("searchInput");
-const searchBtn = document.getElementById("searchBtn");
+
 
 const getChannelIcon = (video_data) => {
     fetch(
@@ -81,3 +80,12 @@ const makeVideoCard = (data) => {
 
     videoCardContainer.appendChild(videoCard)
 }
+
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
+
+
+searchBtn.addEventListener("click", () => {
+    const searchQuery = searchInput.value;
+    window.location.href = `https://www.youtube.com/results?search_query=${searchQuery}`;
+});
