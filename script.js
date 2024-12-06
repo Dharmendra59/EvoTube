@@ -83,9 +83,10 @@ const makeVideoCard = (data) => {
 
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
+let searchLink = "https://www.youtube.com/results?search_query=";
 
-
-searchBtn.addEventListener("click", () => {
-    const searchQuery = searchInput.value;
-    window.location.href = `https://www.youtube.com/results?search_query=${searchQuery}`;
-});
+searchBtn.addEventListener('click', () => {
+    if(searchInput.value.length){
+        location.href = searchLink + searchInput.value;
+    }
+})
